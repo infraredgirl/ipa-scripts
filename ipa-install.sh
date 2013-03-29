@@ -28,3 +28,16 @@ sudo setenforce 0
 
 echo "Installing IPA server ..."
 sudo ipa-server-install -a $PASSWORD -p $PASSWORD --setup-dns --no-forwarders -r $REALM -U
+
+echo "Configuring firewalld ..."
+sudo firewall-cmd --add-port  80/tcp
+sudo firewall-cmd --add-port 443/tcp
+sudo firewall-cmd --add-port 389/tcp
+sudo firewall-cmd --add-port 636/tcp
+sudo firewall-cmd --add-port  88/tcp
+sudo firewall-cmd --add-port 464/tcp
+sudo firewall-cmd --add-port  53/tcp
+sudo firewall-cmd --add-port  88/udp
+sudo firewall-cmd --add-port 464/udp
+sudo firewall-cmd --add-port  53/udp
+sudo firewall-cmd --add-port 123/udp
