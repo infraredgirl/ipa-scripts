@@ -34,10 +34,7 @@ echo "Updating system packages ..."
 sudo yum -y update
 
 echo "Installing selinux-policy-devel ..."
-rpm -q selinux-policy-devel
-if [ $? -eq 1 ] ; then
-    sudo yum -y install selinux-policy-devel
-fi
+sudo yum -y install selinux-policy-devel
 
 echo "Updating git working tree..."
 cd $GIT_DIR

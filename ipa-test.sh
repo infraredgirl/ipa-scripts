@@ -3,10 +3,7 @@
 source ipa-config.sh
 
 echo "Installing python-nose ..."
-rpm -q python-nose
-if [ $? -eq 1 ] ; then
-    sudo yum -y install python-nose
-fi
+sudo yum -y install python-nose
 
 echo "Configuring testing environment ..."
 mkdir -p ~/.ipa
