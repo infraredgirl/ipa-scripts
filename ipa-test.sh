@@ -21,6 +21,6 @@ rm -f tests/test_xmlrpc/service.crt
 echo "$PASSWORD" | kinit admin
 
 echo "Running tests ... "
-make > /dev/null
-./make-testcert > /dev/null
-./make-test > /dev/null
+make
+./make-testcert
+./make-test

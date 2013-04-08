@@ -47,7 +47,7 @@ if [ -n "$PATCH" ] ; then
 fi
 
 echo "Cleaning git working tree ..."
-git clean -dfx > /dev/null
+git clean -dfx
 
 echo "Building rpms ..."
-make rpms > /dev/null
+make rpms
