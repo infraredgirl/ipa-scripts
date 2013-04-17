@@ -1,13 +1,12 @@
 #! /bin/bash
 
-set -e
 source ipa-config.sh
 
 IP=`ip addr show eth0 | grep "inet " | cut -d ' ' -f6 | cut -d '/' -f1`
 REALM=`hostname | cut -d '.' -f2- | tr '[:lower:]' '[:upper:]'`
 
-echo "Configuring /etc/hosts ..."
 if [ `grep $IP /etc/hosts | wc -l` -eq 0 ] ; then
+    echo "Configuring /etc/hosts ..."
     sudo IP=$IP sh -c 'echo "$IP    `hostname`" >> /etc/hosts'
 fi
 
