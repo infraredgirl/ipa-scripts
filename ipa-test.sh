@@ -2,6 +2,12 @@
 
 source ipa-config.sh
 
+echo "Enabling updates-testing repo ..."
+sudo yum-config-manager --enable updates-testing > /dev/null
+
+echo "Updating system packages ..."
+sudo yum -y update
+
 echo "Installing python-nose ..."
 sudo yum -y install python-nose
 

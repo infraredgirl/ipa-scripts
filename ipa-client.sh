@@ -26,8 +26,8 @@ if [ `grep $IP /etc/hosts | wc -l` -eq 0 ] ; then
     sudo IP=$IP sh -c 'echo "$IP    `hostname`" >> /etc/hosts'
 fi
 
-echo "Disabling updates-testing repo ..."
-sudo sed -i 's/enabled=1/enabled=0/g' /etc/yum.repos.d/fedora-updates-testing.repo
+echo "Enabling updates-testing repo ..."
+sudo yum-config-manager --enable updates-testing > /dev/null
 
 echo "Updating system packages ..."
 sudo yum -y update
