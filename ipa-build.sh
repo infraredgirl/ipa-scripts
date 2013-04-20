@@ -10,7 +10,7 @@ if [ -n "$1" ] ; then
 	echo $USAGE
 	exit 1
     fi
-    
+
     if [ -z "$PATCH" ] ; then
 	echo "Please provide the path to patch"
 	echo $USAGE
@@ -25,16 +25,11 @@ if [ -n "$1" ] ; then
 
 fi
 
-source ipa-config.sh
-
-echo "Enabling updates-testing repo ..."
-sudo yum-config-manager --enable updates-testing > /dev/null
-
-echo "Updating system packages ..."
-sudo yum -y update
+source config/config.sh
+source lib/env-setup.sh
 
 echo "Installing selinux-policy-devel ..."
-sudo yum -y install selinux-policy-devel
+sudo yum install selinux-policy-devel --enablerepo=updates-testing -y
 
 echo "Updating git working tree..."
 cd $GIT_DIR

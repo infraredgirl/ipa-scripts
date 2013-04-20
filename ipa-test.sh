@@ -1,15 +1,10 @@
 #! /bin/bash 
 
-source ipa-config.sh
-
-echo "Enabling updates-testing repo ..."
-sudo yum-config-manager --enable updates-testing > /dev/null
-
-echo "Updating system packages ..."
-sudo yum -y update
+source config/config.sh
+source lib/env-setup.sh
 
 echo "Installing python-nose ..."
-sudo yum -y install python-nose
+sudo yum install python-nose --enablerepo=updates-testing -y
 
 echo "Configuring testing environment ..."
 mkdir -p ~/.ipa
