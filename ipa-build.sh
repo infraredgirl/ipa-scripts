@@ -33,6 +33,7 @@ sudo yum install selinux-policy-devel --enablerepo=updates-testing -y
 
 echo "Updating git working tree..."
 cd $GIT_DIR
+git checkout master
 git reset --hard origin/master
 git pull
 
