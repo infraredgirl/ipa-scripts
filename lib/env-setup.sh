@@ -1,6 +1,7 @@
 #! /bin/bash
 
 echo "Updating system packages ..."
+sudo yum clean all
 sudo yum update --enablerepo=updates-testing -y
 
 echo "Setting SELinux to permissive mode ..."
