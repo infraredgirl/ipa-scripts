@@ -3,7 +3,7 @@
 source config/config.sh
 source lib/env-setup.sh
 
-REALM=`hostname | cut -d '.' -f2- | tr '[:lower:]' '[:upper:]'`
+REALM=`dnsdomainname | tr '[:lower:]' '[:upper:]'`
 
 echo "Installing custom built IPA rpms ..."
 sudo yum -y localinstall $GIT_DIR/dist/rpms/*.rpm
