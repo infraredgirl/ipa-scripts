@@ -17,3 +17,5 @@ if [ `grep $IP /etc/hosts | wc -l` -eq 0 ] ; then
     echo "Configuring /etc/hosts ..."
     sudo IP=$IP sh -c 'echo "$IP    `hostname`" >> /etc/hosts'
 fi
+
+source lib/current-workarounds.sh
