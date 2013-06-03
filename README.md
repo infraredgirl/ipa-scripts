@@ -14,13 +14,13 @@ Helper scripts for upstream development on the FreeIPA project
 
 ### Build RPMs, install a server, run unit tests
 Build RPMs from current master:  
-$ ```./ipa-build.sh```  
+```$ ./ipa-build.sh```  
 Optionally, you can apply a git formatted patch on top of master:  
-$ ```./ipa-build.sh --patch /path/to/patch```  
+```$ ./ipa-build.sh --patch /path/to/patch```  
 Install the server:  
-$ ```./ipa-server.sh```  
+```$ ./ipa-server.sh```  
 Run unit tests:  
-$ ```./ipa-test.sh```
+```$ ./ipa-test.sh```
 
 ### Install a server and a replica
 Assuming:  
@@ -29,13 +29,13 @@ Assuming:
 
 (on server):  
 Install the server:  
-$ ```./ipa-server.sh```  
+```$ ./ipa-server.sh```  
 Prepare the replica file:  
-$ ```./ipa-replica-prepare.sh --replica replica.example.com```
+```$ ./ipa-replica-prepare.sh --replica replica.example.com```
 
 (on replica):  
 Install the replica:  
-$ ```./ipa-replica-install.sh --master server.example.com```
+```$ ./ipa-replica-install.sh --master server.example.com```
 
 ### Install a server and a client
 Assuming:  
@@ -44,8 +44,8 @@ Assuming:
 
 (on server):  
 Install the server:  
-$ ```./ipa-server.sh```
+```$ ./ipa-server.sh```
 
 (on client):  
 Install the client:  
-$ ```./ipa-client.sh --server server.example.com```
+```$ ./ipa-client.sh --server server.example.com```
