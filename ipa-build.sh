@@ -40,6 +40,13 @@ git pull
 if [ -n "$PATCH" ] ; then
     echo "Applying patch $PATCH  ..."
     git am $PATCH
+else
+    # If there are RPMs from current master already built, don't do anything
+    HASH=`git log --pretty=format:"%h" -1`
+    if [ -f $GIT_DIR/dist/rpms/freeipa-client-*$HASH*.rpm  ]; then
+	echo "RPMs already present, exiting."
+	exit 0
+    fi
 fi
 
 echo "Cleaning git working tree ..."
