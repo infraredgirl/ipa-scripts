@@ -18,4 +18,8 @@ if [ `grep $IP /etc/hosts | wc -l` -eq 0 ] ; then
     sudo IP=$IP sh -c 'echo "$IP    `hostname`" >> /etc/hosts'
 fi
 
+echo "Setting environment variables ..."
+DOMAIN=`dnsdomainname`
+REALM=`dnsdomainname | tr '[:lower:]' '[:upper:]'`
+
 source lib/current-workarounds.sh
