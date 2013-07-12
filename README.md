@@ -40,7 +40,7 @@ Install the replica:
 ### Install a server and a client
 Assuming:  
 1. RPMs have already been built and are available at ```$GIT_DIR/dist/rpms/```  
-2. Server's fqdn is ```server.example.com```
+2. Server's IP address is ```10.10.10.10```
 
 (on server):  
 Install the server:  
@@ -48,4 +48,4 @@ Install the server:
 
 (on client):  
 Install the client:  
-```$ ./ipa-client.sh --server server.example.com```
+```$ ./ipa-client.sh --server-ip 10.10.10.10```
