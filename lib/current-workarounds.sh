@@ -7,7 +7,5 @@
 # removed from here. If there are no known issues in the dependent packages at the
 # moment, this file should contain no workarounds.
 
-echo "Applying workarounds ..."
+#echo "Applying workarounds ..."
 
-# This addresses https://bugzilla.redhat.com/show_bug.cgi?id=965989
-sudo mkdir -p /run/user/0
