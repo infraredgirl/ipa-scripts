@@ -4,7 +4,7 @@ source config/config.sh
 source lib/env-setup.sh
 
 echo "Installing packages needed for testing FreeIPA ..."
-sudo yum install python-nose PyYAML --enablerepo=updates-testing -y
+sudo yum install python-nose PyYAML -y
 sudo pip install selenium
 
 echo "Configuring testing environment ..."

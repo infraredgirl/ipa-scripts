@@ -28,12 +28,8 @@ fi
 source config/config.sh
 source lib/env-setup.sh
 
-echo "Installing build dependencies ..."
-cd $GIT_DIR
-make
-sudo yum-builddep freeipa.spec --enablerepo=updates-testing -y
-
 echo "Updating git working tree..."
+cd $GIT_DIR
 git checkout master
 git reset --hard origin/master
 git pull
