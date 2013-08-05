@@ -7,5 +7,7 @@
 # removed from here. If there are no known issues in the dependent packages at the
 # moment, this file should contain no workarounds.
 
-#echo "Applying workarounds ..."
+echo "Applying workarounds ..."
+sudo wget http://jdennis.fedorapeople.org/ipa-devel/ipa-devel-fedora.repo -O /etc/yum.repos.d/ipa-devel.repo
+sudo yum -y update sssd
 
