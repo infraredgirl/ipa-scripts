@@ -26,4 +26,4 @@ echo "Syncing time with master ..."
 sudo ntpdate $MASTER
 
 echo "Installing replica ..."
-sudo ipa-replica-install --setup-ca ~/replica-info-`hostname`.gpg -p $PASSWORD -w $PASSWORD -U
+sudo ipa-replica-install ~/replica-info-`hostname`.gpg -p $PASSWORD -w $PASSWORD -U
