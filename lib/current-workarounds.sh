@@ -8,5 +8,3 @@
 # moment, this file should contain no workarounds.
 
 echo "Applying workarounds ..."
-sudo yum downgrade -y python-requests pylint libsss_nss_idmap*
-sudo yum-builddep $GIT_DIR/freeipa.spec -y
